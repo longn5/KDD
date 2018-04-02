@@ -1,0 +1,147 @@
+@font-face{
+  font-family: "longsfont";
+  src: url('../fonts/HelveticaNeueRegular.ttf');
+}
+
+@font-face{
+  font-family: "HelveticaNeueThin";
+  src:url('../fonts/HelveticaNeue-Thin.ttf');
+}
+
+@font-face{
+  font-family: "HelveticaNeue-UltraLight";
+  src:url('../fonts/HelveticaNeue-UltraLight.tff') format('truetype');
+  font-weight: normal;
+}
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#vid-container{
+  width: auto;
+  height: auto;
+  position: absolute;
+
+}
+
+video{
+  -webkit-transform:scale(1.35);
+}
+
+/* #main-logo{
+  color: white;
+  font-size: 72px;
+  position: fixed;
+  float: left;
+  top:35%;
+  right:42.5%;
+  z-index: 100;
+  -webkit-animation-duration: 7s;
+} */
+
+#vid{
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+}
+
+.dream{
+  color:white;
+  top: 40%;
+  font-size: 5vw;
+  float: left;
+  position: fixed;
+  font-family: 'HelveticaNeue-UltraLight', sans-serif;
+  top:35%;
+  right:25%;
+  z-index: 100;
+  -webkit-animation-duration: 7s;
+}
+
+/* #karen-doesnt{
+  color: white;
+  top: 35%;
+  left: 40%;
+  font-size: 68px;
+  float: left;
+  position: fixed;
+  font-family: 'helvetica-neue', sans-serif;
+  -webkit-animation: fadeIn 4s;
+  z-index: 100;
+} */
+
+.social{
+  color: white;
+  font-family: 'HelveticaNeue-UltraLight', sans-serif;
+  font-size: 1vw;
+  z-index: 100;
+  position: fixed;
+  bottom: 40px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.social a{
+  color: white;
+  padding: 0 .5em;
+  font-size: 1vw;
+  text-decoration: none;
+}
+
+.line{
+  height: 1px;
+  background-color: white;
+  margin: 2px auto 12px auto;
+  bottom: 100px;
+}
+
+/* span{
+  font-size: 1em;
+  padding: 5px 10px 10px 10px;
+} */
+
+#psutv-logo{
+  padding: 0 30px;
+}
+.hamburger-container{
+  z-index: 100;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  width: auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.bar{
+  display: block;
+  height: 3px;
+  width: 35px;
+  background: white;
+  margin: 6px auto;
+  -webkit-transition: all .7s ease;
+}
+
+.hamburger-container:hover .top{
+  -webkit-transform: translateY(4px) rotateZ(45deg);
+}
+
+.hamburger-container:hover .bottom{
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.hamburger-container:hover .middle{
+  width: 0;
+}
