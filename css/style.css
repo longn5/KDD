@@ -1,53 +1,43 @@
-@font-face{
-  font-family: "longsfont";
-  src: url('../fonts/HelveticaNeueRegular.ttf');
-}
-
-@font-face{
-  font-family: "HelveticaNeueThin";
-  src:url('../fonts/HelveticaNeue-Thin.ttf');
-}
-
-@font-face{
-  font-family: "HelveticaNeue-UltraLight";
-  src:url('../fonts/HelveticaNeue-UltraLight.tff') format('truetype');
+@font-face {
+  font-family: "helvetica-neue";
+  src: url('/../fonts/HelveticaNeue-Medium-11.ttf') format('truetype');
   font-weight: normal;
 }
 
-*{
+@font-face {
+  font-family: "helvetica-neue-Thin";
+  src: url('HelveticaNeue-Thin-12.ttf') format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "helvetica-neue-ultralight";
+  src: url('/../fonts/HelveticaNeue-UltraLight-03.tff') format('truetype');
+  font-weight: 100;
+}
+
+* {
   margin: 0px;
   padding: 0px;
 }
 
-body{
+body {
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
 
-#vid-container{
+#vid-container {
   width: auto;
   height: auto;
   position: absolute;
-
 }
 
-video{
-  -webkit-transform:scale(1.35);
+video {
+  -webkit-transform: scale(1.35);
 }
 
-/* #main-logo{
-  color: white;
-  font-size: 72px;
-  position: fixed;
-  float: left;
-  top:35%;
-  right:42.5%;
-  z-index: 100;
-  -webkit-animation-duration: 7s;
-} */
-
-#vid{
+#vid {
   width: 100vw;
   height: 100vh;
   top: 50%;
@@ -55,34 +45,35 @@ video{
   object-fit: cover;
 }
 
-.dream{
-  color:white;
+.title-container {
+  color: white;
   top: 40%;
-  font-size: 5vw;
+  font-size: 90px;
   float: left;
   position: fixed;
-  font-family: 'HelveticaNeue-UltraLight', sans-serif;
-  top:35%;
-  right:25%;
+  font-family: 'helvetica-neue-Thin';
+  top: 35%;
+  right: 25%;
   z-index: 100;
-  -webkit-animation-duration: 7s;
+  -webkit-animation: fadeIn 4s;
 }
 
-/* #karen-doesnt{
-  color: white;
-  top: 35%;
-  left: 40%;
-  font-size: 68px;
-  float: left;
-  position: fixed;
-  font-family: 'helvetica-neue', sans-serif;
-  -webkit-animation: fadeIn 4s;
-  z-index: 100;
-} */
+#karen {
+  letter-spacing: 1.3vw;
+}
 
-.social{
+#doesnt {
+  font-size: 70px;
+  letter-spacing: .85vw;
+}
+
+#dream {
+  letter-spacing: 1.1vw;
+}
+
+.social {
   color: white;
-  font-family: 'HelveticaNeue-UltraLight', sans-serif;
+  font-family: 'helvetica-neue-Thin', sans-serif;
   font-size: 1vw;
   z-index: 100;
   position: fixed;
@@ -91,29 +82,42 @@ video{
   text-decoration: none;
 }
 
-.social a{
+.social a {
   color: white;
   padding: 0 .5em;
   font-size: 1vw;
   text-decoration: none;
 }
 
-.line{
+.line {
   height: 1px;
   background-color: white;
   margin: 2px auto 12px auto;
   bottom: 100px;
 }
 
-/* span{
-  font-size: 1em;
-  padding: 5px 10px 10px 10px;
-} */
-
-#psutv-logo{
+#psutv-logo {
   padding: 0 30px;
 }
-.hamburger-container{
+
+.watch-now {
+  font-family: 'helvetica-neue-Thin';
+  color: black;
+  font-size: 1em;
+  padding: 10px 25px;
+  background-color: rgba(206, 206, 206, .5);
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 1.5vw;
+  text-decoration: none;
+}
+
+.watch-now:visited {
+  color: black;
+}
+
+.hamburger-container {
   z-index: 100;
   position: fixed;
   top: 50px;
@@ -125,7 +129,7 @@ video{
   cursor: pointer;
 }
 
-.bar{
+.bar {
   display: block;
   height: 3px;
   width: 35px;
@@ -134,14 +138,51 @@ video{
   -webkit-transition: all .7s ease;
 }
 
-.hamburger-container:hover .top{
+.hamburger-container:hover .top {
   -webkit-transform: translateY(4px) rotateZ(45deg);
 }
 
-.hamburger-container:hover .bottom{
+.hamburger-container:hover .bottom {
   -webkit-transform: translateY(-15px) rotateZ(-45deg);
 }
 
-.hamburger-container:hover .middle{
+.hamburger-container:hover .middle {
   width: 0;
+}
+
+#sidebar{
+  height:100vh;
+  width: 700px;
+  position: absolute;
+  top: 0px;
+  background-image: url('../img/sidebar.png');
+}
+
+@media (max-width: 1125px) {
+  .title-container {
+    color: white;;
+    float: left;
+    position: absolute;
+    font-family: 'helvetica-neue-Thin';
+    top: 50%;
+    right: 50%;
+    z-index: 100;
+    -webkit-animation: fadeIn 4s;
+    transform: translate(63%);
+  }
+  #karen {
+    letter-spacing: .85vw;
+    display:inline-block;
+    font-size: 100px;
+  }
+  #doesnt {
+    display: inline-block;
+    font-size: 100px;
+    letter-spacing: .85vw;
+  }
+  #dream {
+    font-size: 150px;
+    letter-spacing: 7.5vw;
+    margin: auto;
+  }
 }

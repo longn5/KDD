@@ -1,25 +1,14 @@
+//delaying the video by 1.5 seconds
 setTimeout(function(){
   document.getElementById("vid").play();
 }, 1500);
 
-// setTimeout(function(){
-//   document.getElementById("background-music").play();
-// }, 300);
-
-// var $video = $('video'),
-//     $window = $(window);
-//
-// $(window).resize(function (){
-//
-//   var height = $window.height();
-//   $video.css('height', height);
-//
-//   var videoWidth = $video.width(),
-//       windowWidth = $window.width(),
-//       marginLeftAdjust = (windowWidth - videoWidth) / 2;
-//
-//   $video.css({
-//     'height' : height;
-//     'marginLeft' : marginLeftAdjust;
-//   });
-// }).resize;
+//To turn off sound when tab not in focus
+$(window).blur(function()
+{
+  $('#vid')[0].muted = true;
+});
+$(window).focus(function()
+{
+  $('#vid')[0].muted = false;
+});
