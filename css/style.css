@@ -1,19 +1,24 @@
 @font-face {
   font-family: "helvetica-neue";
-  src: url('/../fonts/HelveticaNeue-Medium-11.ttf') format('truetype');
+  src: url(../fonts/HelveticaNeue-Medium-11.ttf) format('truetype');
   font-weight: normal;
 }
 
 @font-face {
   font-family: "helvetica-neue-Thin";
-  src: url('HelveticaNeue-Thin-12.ttf') format('truetype');
+  src: url(../fonts/HelveticaNeue-Thin-12.ttf) format('truetype');
   font-weight: 200;
 }
 
 @font-face {
   font-family: "helvetica-neue-ultralight";
-  src: url('/../fonts/HelveticaNeue-UltraLight-03.tff') format('truetype');
+  src: url(../fonts/HelveticaNeue-UltraLight-03.tff) format('truetype');
   font-weight: 100;
+}
+
+@font-face{
+  font-family: "garamond-pro-italic";
+  src:url(../fonts/AGARAMONDPRO-ITALIC.OTF);
 }
 
 * {
@@ -77,7 +82,7 @@ video {
   font-size: 1vw;
   z-index: 100;
   position: fixed;
-  bottom: 40px;
+  bottom: 20px;
   margin-left: 30px;
   text-decoration: none;
 }
@@ -138,26 +143,80 @@ video {
   -webkit-transition: all .7s ease;
 }
 
-.hamburger-container:hover .top {
+.hamburger-container .top {
   -webkit-transform: translateY(4px) rotateZ(45deg);
 }
 
-.hamburger-container:hover .bottom {
+.hamburger-container .bottom {
   -webkit-transform: translateY(-15px) rotateZ(-45deg);
 }
 
-.hamburger-container:hover .middle {
+.hamburger-container .middle {
   width: 0;
 }
 
 #sidebar{
   height:100vh;
-  width: 700px;
+  width: 37vw;
   position: absolute;
   top: 0px;
   background-image: url('../img/sidebar.png');
+  display: none;
+  font-family: 'helvetica-neue-Thin';
+  color: white;
 }
 
+#menu-title-container{
+  margin-top: 110px;
+  margin-left: 30px;
+  letter-spacing: 0.8vw;
+  line-height: 1.1;
+}
+
+#karen-menu{
+  font-size: 2.5vw;
+  padding: 0 1vw;
+  display: block;
+}
+#doesnt-menu, #dream-menu{
+  font-size: 2.5vw;
+  padding: 0;
+  display: inline-block;
+}
+
+#doesnt-menu{
+  padding-left: 1vw;
+}
+
+#menu-items-container{
+  font-family: "garamond-pro-italic";
+  font-size: 2vw;
+  color: white;
+  margin-top: 25px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+.menu-item{
+  padding: 30px 25px;
+  text-decoration: none;
+}
+
+.menu-item a{
+  text-decoration: none;
+}
+
+.menu-item a:visited{
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item a:hover{
+  border-bottom: solid 4px white;
+  display: inline;
+  padding-bottom: 2px;
+}
+
+/*----------------------MOBILE STARTS HERE---------------------*/
 @media (max-width: 1125px) {
   .title-container {
     color: white;;
@@ -186,3 +245,4 @@ video {
     margin: auto;
   }
 }
+/*----------------------MOBILE ENDS HERE---------------------*/

@@ -11,7 +11,8 @@
 <body>
 
   <!-- <img id="main-logo" class="animated fadeIn"src="img/logo.svg"> -->
-  <video id="vid" loop>
+  <!--delete mute when testing for sound-->
+  <video id="vid" muted loop>
       <source src="vid/kdd_landing_video.mp4" type="video/mp4">
     </video>
   <div class="title-container animated fadeIn">
@@ -23,9 +24,9 @@
       <source src="audio/bensound-november.mp3" type="audio/mpeg">
     </audio> -->
   <div class="hamburger-container">
-    <div class="bar top"></div>
-    <div class="bar middle"></div>
-    <div class="bar bottom"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
 
   <div class="social">
@@ -45,6 +46,19 @@
   </a>
 
   <div id="sidebar">
+    <div id="menu-title-container">
+    <p id="karen-menu">KAREN</p>
+    <p id="doesnt-menu">DOESN'T</p>
+    <p id="dream-menu">DREAM</p>
+    </div>
+    <div id="menu-items-container">
+      <p class="menu-item"><a href="">HOME</a></p>
+      <p class="menu-item"><a href="">STORY</a></p>
+      <p class="menu-item"><a href="">TRAILER</a></p>
+      <p class="menu-item"><a href="">ACCLAIM</a></p>
+      <p class="menu-item"><a href="">SHOWTIMES</a></p>
+      <p class="menu-item"><a href="">MERCHANDISE</a></p>
+    </div>
   </div>
   <script src="js/script.js" type="text/javascript"></script>
 </body>
