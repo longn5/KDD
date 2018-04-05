@@ -53,14 +53,18 @@ video {
 .title-container {
   color: white;
   top: 40%;
-  font-size: 90px;
+  /* font-size: 90px; */
   float: left;
   position: fixed;
   font-family: 'helvetica-neue-Thin';
   top: 35%;
-  right: 25%;
+  right: 15%;
   z-index: 100;
   -webkit-animation: fadeIn 4s;
+}
+
+.title-container img{
+  width: 35vw;
 }
 
 #karen {
@@ -102,7 +106,7 @@ video {
 }
 
 #psutv-logo {
-  padding: 0 30px;
+  padding-right: 30px;
 }
 
 .watch-now {
@@ -167,10 +171,15 @@ video {
 }
 
 #menu-title-container{
-  margin-top: 110px;
+  margin-top: 90px;
   margin-left: 30px;
-  letter-spacing: 0.8vw;
+  letter-spacing: 0.3vw;
   line-height: 1.1;
+  margin-left: 25px;
+}
+
+#menu-title-container img{
+  width: 500px;
 }
 
 #karen-menu{
@@ -192,12 +201,11 @@ video {
   font-family: "garamond-pro-italic";
   font-size: 2vw;
   color: white;
-  margin-top: 25px;
-  margin-left: 30px;
+  margin-left: 55px;
   text-decoration: none;
 }
 .menu-item{
-  padding: 30px 25px;
+  padding: 25px 0;
   text-decoration: none;
 }
 
@@ -246,3 +254,92 @@ video {
   }
 }
 /*----------------------MOBILE ENDS HERE---------------------*/
+
+/*------------- sound bar animation BEGINS HERE--------------*/
+.audio-icon{
+  bottom: 80px;
+  position:fixed;
+}
+#bars {
+   white-space:no-wrap;
+    height:20px;
+}
+.sound-bar {
+   background: #ffffff;
+    bottom: 1px;
+    height: 3px;
+    position: absolute;
+    width: 3px;
+}
+#bar:hover .sound-bar{
+background: blue;
+}
+.active{
+  animation:none;
+}
+@keyframes soundBars {
+    0% {
+        height: 3px;
+    }
+    100% {
+        height: 20px;
+    }
+}
+
+.sound-bar:nth-child(1),
+.sound-bar:nth-child(2),
+.sound-bar:nth-child(3),
+.sound-bar:nth-child(4),
+.sound-bar:nth-child(5),
+.sound-bar:nth-child(6),
+.sound-bar:nth-child(7){
+   animation-name:soundBars;
+   -webkit-animation-name:soundBars;
+   animation-duration:0.85s;
+  -webkit-animation-duration:0.85s;
+  animation-timing-function:linear;
+  -webkit-animation-timing-function:linear;
+  animation-fill-mode:forwards;
+  -webkit-animation-fill-mode:forwards;
+  animation-direction:alternate;
+  -webkit-animation-direction:alternate;
+  animation-iteration-count:infinite;
+  -webkit-animation-iteration-count:infinite;
+}
+
+.sound-bar:nth-child(1)  {
+   left: 1px;
+  animation-delay:0.51s;
+  -webkit-animation-delay:0.51s;
+}
+.sound-bar:nth-child(2)  {
+   left: 5px;
+  animation-delay:0.52s;
+  -webkit-animation-delay:0.52s;
+}
+.sound-bar:nth-child(3)  {
+   left: 9px;
+  animation-delay:.33s;
+  -webkit-animation-delay:0.33s;
+}
+.sound-bar:nth-child(4)  {
+   left: 13px;
+  animation-delay:.14s;
+  -webkit-animation-delay:0.14s;
+}
+.sound-bar:nth-child(5)  {
+   left: 17px;
+  animation-delay:.45s;
+  -webkit-animation-delay:0.45s;
+}
+.sound-bar:nth-child(6)  {
+   left: 21px;
+  animation-delay:.26s;
+  -webkit-animation-delay:0.26s;
+}
+.sound-bar:nth-child(7)  {
+   left: 25px;
+  animation-delay:.17s;
+  -webkit-animation-delay:0.17s;
+}
+/*------------- sound bar animation ENDS HERE--------------*/

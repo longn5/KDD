@@ -44,3 +44,10 @@ $('.hamburger-container').click(function() {
 
   }
 });
+
+// sound bar
+$(function(){
+ $("#bars").click(function(){
+   $(".sound-bar").toggleClass("active");
+ })
+})
