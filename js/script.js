@@ -46,8 +46,19 @@ $('.hamburger-container').click(function() {
 });
 
 // sound bar
+// sound bar
 $(function(){
- $("#bars").click(function(){
-   $(".sound-bar").toggleClass("active");
- })
-})
+  $(".audio-icon").click(function(){
+    $(".sound-bar").toggleClass("active");
+  })
+});
+//mute and unmute when click on soundbar
+$(function(){
+    $(".audio-icon").click( function (){
+      if( $("video").prop('muted') ) {
+        $("video").prop('muted', false);
+      } else {
+        $("video").prop('muted', true);
+      }
+    });
+});

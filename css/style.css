@@ -32,6 +32,10 @@ body {
   padding: 0;
 }
 
+a:visited{
+  color: white;
+}
+
 #vid-container {
   width: auto;
   height: auto;
@@ -40,6 +44,30 @@ body {
 
 video {
   -webkit-transform: scale(1.35);
+}
+
+#story1{
+  width:100vw;
+  height:100vh;
+  top:50%;
+  left:50%;
+  object-fit: cover;
+}
+
+.content-container{
+  position:absolute;
+  top: 30%;
+  left: 63%;
+  width: 33vw;
+  color: white;
+  font-family: 'helvetica-neue-Thin';
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: .1em;
+}
+.content-container p{
+  padding: 10px;
+  line-height: 1.5;
 }
 
 #vid {
@@ -80,7 +108,7 @@ video {
   letter-spacing: 1.1vw;
 }
 
-.social {
+/* .social {
   color: white;
   font-family: 'helvetica-neue-Thin', sans-serif;
   font-size: 1vw;
@@ -96,17 +124,46 @@ video {
   padding: 0 .5em;
   font-size: 1vw;
   text-decoration: none;
+} */
+
+.social {
+  color: white;
+  font-family: 'helvetica-neue-Thin', sans-serif;
+  font-size: 1vw;
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  text-decoration: none;
+}
+.social a{
+  color: white;
+  font-size: 0.8vw;
+  text-decoration: none;
+  font-weight:bold;
+  letter-spacing: 2px;
+  margin:0;
+  padding:0;
+}
+.social a:nth-of-type(n + 2) {
+  padding: 0 .5em;
 }
 
-.line {
+/* .line {
   height: 1px;
   background-color: white;
   margin: 2px auto 12px auto;
   bottom: 100px;
+} */
+
+.line {
+  height: 1px;
+  background-color: white;
+  margin: 2px auto 9px 30px;
+  bottom: 100px;
 }
 
 #psutv-logo {
-  padding-right: 30px;
+  padding: 0 30px;
 }
 
 .watch-now {
@@ -188,7 +245,7 @@ video {
   display: block;
 }
 #doesnt-menu, #dream-menu{
-  font-size: 2.5vw;
+  font-size: 25px;
   padding: 0;
   display: inline-block;
 }
@@ -205,7 +262,7 @@ video {
   text-decoration: none;
 }
 .menu-item{
-  padding: 25px 0;
+  padding: 1vw 0;
   text-decoration: none;
 }
 
@@ -256,9 +313,14 @@ video {
 /*----------------------MOBILE ENDS HERE---------------------*/
 
 /*------------- sound bar animation BEGINS HERE--------------*/
+/* sound bar animation */
 .audio-icon{
   bottom: 80px;
+  margin-left: 30px;
   position:fixed;
+  cursor:pointer;
+  width:20px;
+  height:20px;
 }
 #bars {
    white-space:no-wrap;
@@ -271,12 +333,14 @@ video {
     position: absolute;
     width: 3px;
 }
-#bar:hover .sound-bar{
-background: blue;
+#bars:hover .sound-bar{
+background: #adadad;
 }
 .active{
-  animation:none;
+animation:none !important;
+-webkit-animation:none !important;
 }
+
 @keyframes soundBars {
     0% {
         height: 3px;
