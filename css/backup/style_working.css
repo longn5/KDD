@@ -1,0 +1,553 @@
+@font-face {
+  font-family: "helvetica-neue";
+  src: url(../fonts/HelveticaNeue-Medium-11.ttf) format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "helvetica-neue-Thin";
+  src: url(../fonts/HelveticaNeue-Thin-12.ttf) format('truetype');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: "helvetica-neue-ultralight";
+  src: url(../fonts/HelveticaNeue-UltraLight-03.tff) format('truetype');
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "garamond-pro-italic";
+  src: url(../fonts/AGARAMONDPRO-ITALIC.OTF);
+}
+
+@font-face {
+  font-family: "garamond-pro-regular";
+  src: url(../fonts/AGARAMONDPRO-REGULAR.OTF);
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+}
+
+a:visited {
+  color: white;
+}
+
+h3 {
+  color: #76849b;
+  padding: 5px 10px;
+  font-size: 40px;
+  font-family: 'garamond-pro-regular';
+  font-weight: 100;
+}
+
+#vid-container {
+  width: auto;
+  height: auto;
+  position: absolute;
+}
+
+video {
+  -webkit-transform: scale(1.35);
+}
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+}
+
+#mobile-background {
+  display: none;
+}
+
+.content-container {
+  position: absolute;
+  top: 30%;
+  left: 63%;
+  width: 33vw;
+  color: white;
+  font-family: 'helvetica-neue-Thin';
+  font-size: 1.1em;
+  font-weight: 600;
+  letter-spacing: .1em;
+}
+
+.content-container p {
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.acclaim-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -585px;
+  width: 1500px;
+  color: white;
+  font-family: 'helvetica-neue-Thin';
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: .1em;
+  /* transform: translate(53%); */
+}
+
+.acclaim {
+  display: inline-block;
+  padding: 0 50px;
+}
+
+.reviewer {
+  text-align: center;
+  font-size: .8em;
+  font-weight: 200;
+  color: #acadaf;
+}
+
+#vid {
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+}
+
+.title-container {
+  color: white;
+  top: 40%;
+  /* font-size: 90px; */
+  float: left;
+  position: fixed;
+  font-family: 'helvetica-neue-Thin';
+  top: 35%;
+  right: 15%;
+  z-index: 100;
+  -webkit-animation: fadeIn 4s;
+}
+
+.title-container img {
+  width: 35vw;
+}
+
+#karen {
+  letter-spacing: 1.3vw;
+}
+
+#doesnt {
+  font-size: 70px;
+  letter-spacing: .85vw;
+}
+
+#dream {
+  letter-spacing: 1.1vw;
+}
+
+
+/* .social {
+  color: white;
+  font-family: 'helvetica-neue-Thin', sans-serif;
+  font-size: 1vw;
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  margin-left: 30px;
+  text-decoration: none;
+}
+
+.social a {
+  color: white;
+  padding: 0 .5em;
+  font-size: 1vw;
+  text-decoration: none;
+} */
+
+.social {
+  color: white;
+  font-family: 'helvetica-neue-Thin', sans-serif;
+  font-size: 1vw;
+  z-index: 100;
+  position: fixed;
+  bottom: 20px;
+  text-decoration: none;
+}
+
+.social a {
+  color: white;
+  font-size: 0.8vw;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.social a:nth-of-type(n + 2) {
+  padding: 0 .5em;
+}
+
+
+/* .line {
+  height: 1px;
+  background-color: white;
+  margin: 2px auto 12px auto;
+  bottom: 100px;
+} */
+
+.line {
+  height: 1px;
+  background-color: white;
+  margin: 2px auto 9px 30px;
+  bottom: 100px;
+}
+
+#psutv-logo {
+  padding: 0 30px;
+}
+
+.watch-now {
+  font-family: 'helvetica-neue-Thin';
+  color: black;
+  font-size: 1em;
+  padding: 10px 25px;
+  background-color: rgba(206, 206, 206, .5);
+  position: fixed;
+  z-index: 100;
+  bottom: 20px;
+  right: 1.5vw;
+  text-decoration: none;
+}
+
+.watch-now:visited {
+  color: black;
+}
+
+.hamburger-container {
+  z-index: 100;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  -webkit-transition: all .7s ease;
+  transition: all .7s ease;
+  width: auto;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  height: 3px;
+  width: 35px;
+  background: white;
+  margin: 6px auto;
+  -webkit-transition: all .7s ease;
+}
+
+.hamburger-container .top {
+  -webkit-transform: translateY(4px) rotateZ(45deg);
+}
+
+.hamburger-container .bottom {
+  -webkit-transform: translateY(-15px) rotateZ(-45deg);
+}
+
+.hamburger-container .middle {
+  width: 0;
+}
+
+#sidebar {
+  height: 130vh;
+  width: 37vw;
+  position: absolute;
+  top: 0px;
+  background-image: url('../img/sidebar.png');
+  display: none;
+  font-family: 'helvetica-neue-Thin';
+  color: white;
+}
+
+#menu-title-container {
+  margin-top: 90px;
+  margin-left: 30px;
+  letter-spacing: 0.3vw;
+  line-height: 1.1;
+  margin-left: 25px;
+}
+
+#menu-title-container img {
+  width: 500px;
+}
+
+#karen-menu {
+  font-size: 2.5vw;
+  padding: 0 1vw;
+  display: block;
+}
+
+#doesnt-menu, #dream-menu {
+  font-size: 25px;
+  padding: 0;
+  display: inline-block;
+}
+
+#doesnt-menu {
+  padding-left: 1vw;
+}
+
+#menu-items-container {
+  font-family: "garamond-pro-italic";
+  font-size: 2vw;
+  color: white;
+  margin-left: 55px;
+  text-decoration: none;
+}
+
+.menu-item {
+  padding: 1vw 0;
+  text-decoration: none;
+}
+
+.menu-item a {
+  text-decoration: none;
+}
+
+.menu-item a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item a:hover {
+  border-bottom: solid 4px white;
+  display: inline;
+  padding-bottom: 2px;
+}
+
+
+/*----------------------MOBILE STARTS HERE---------------------*/
+
+@media (max-width: 1400px) and (min-width:1100px) {
+  #menu-title-container img {
+    width: 35vw;
+  }
+}
+
+@media screen (max-width: 1100px) {
+  .title-container {
+    float: left;
+    position: absolute;
+    top: 40%;
+    right: 50%;
+    z-index: 100;
+    -webkit-animation: fadeIn 4s;
+    transform: translate(50%);
+  }
+  .title-container img {
+    width: 80vw;
+  }
+  .line {
+    height: 3px;
+    margin: 2px 30px 9px 30px;
+  }
+  #psutv-logo {
+    padding: 30px;
+    width: 25vw;
+  }
+  #social-links-container {
+    float: right;
+    margin-top: 4vh;
+  }
+  /*hide sound bars*/
+  .audio-icon {
+    display: none;
+  }
+  /*hides the first 3 links of social links*/
+  .social-links:nth-of-type(-n+3) {
+    display: none;
+  }
+  .social {
+    width: 100%;
+    height: 10vh;
+  }
+  .social a {
+    font-size: 5vw;
+  }
+  #sidebar {
+    width: 100%;
+    position: fixed;
+  }
+  .watch-now {
+    display: none;
+  }
+  .bar {
+    width: 75px;
+    height: 10px;
+    margin-bottom: 15px;
+  }
+  .hamburger-container .top {
+    -webkit-transform: translateY(20px) rotateZ(45deg);
+  }
+  .hamburger-container .bottom {
+    -webkit-transform: translateY(-30px) rotateZ(-45deg);
+  }
+  #menu-title-container {
+    text-align: center;
+    margin-left: 0;
+  }
+  #menu-items-container {
+    font-family: 'garamond-pro-regular';
+    text-align: center;
+    font-size: 7vw;
+    margin-left: 0;
+  }
+  .menu-item {
+    padding: 4%;
+  }
+  .menu-item:active, .menu-item:focus {
+    background-color: rgba(196, 202, 211, .2);
+  }
+  .menu-item a:hover {
+    border-bottom: none;
+  }
+  #menu-title-container img {
+    width: 100vw;
+  }
+  .content-container {
+    top: 10%;
+    left: 0;
+    font-size: 2.2em;
+    padding: 7vw;
+    width: 85vw;
+    overflow: scroll;
+    height: 65%;
+  }
+  .content-container h3 {
+    color: white;
+    font-family: 'garamond-pro-italic';
+    font-size: 65px;
+  }
+}
+
+
+
+
+/*----------------------MOBILE ENDS HERE---------------------*/
+
+
+/*------------- sound bar animation BEGINS HERE--------------*/
+
+
+/* sound bar animation */
+
+.audio-icon {
+  bottom: 80px;
+  margin-left: 30px;
+  position: fixed;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+#bars {
+  white-space: no-wrap;
+  height: 20px;
+}
+
+.sound-bar {
+  background: #ffffff;
+  bottom: 1px;
+  height: 3px;
+  position: absolute;
+  width: 3px;
+}
+
+#bars:hover .sound-bar {
+  background: #adadad;
+}
+
+.active {
+  animation: none !important;
+  -webkit-animation: none !important;
+}
+
+@keyframes soundBars {
+  0% {
+    height: 3px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+
+.sound-bar:nth-child(1), .sound-bar:nth-child(2), .sound-bar:nth-child(3), .sound-bar:nth-child(4), .sound-bar:nth-child(5), .sound-bar:nth-child(6), .sound-bar:nth-child(7) {
+  animation-name: soundBars;
+  -webkit-animation-name: soundBars;
+  animation-duration: 0.85s;
+  -webkit-animation-duration: 0.85s;
+  animation-timing-function: linear;
+  -webkit-animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.sound-bar:nth-child(1) {
+  left: 1px;
+  animation-delay: 0.51s;
+  -webkit-animation-delay: 0.51s;
+}
+
+.sound-bar:nth-child(2) {
+  left: 5px;
+  animation-delay: 0.52s;
+  -webkit-animation-delay: 0.52s;
+}
+
+.sound-bar:nth-child(3) {
+  left: 9px;
+  animation-delay: .33s;
+  -webkit-animation-delay: 0.33s;
+}
+
+.sound-bar:nth-child(4) {
+  left: 13px;
+  animation-delay: .14s;
+  -webkit-animation-delay: 0.14s;
+}
+
+.sound-bar:nth-child(5) {
+  left: 17px;
+  animation-delay: .45s;
+  -webkit-animation-delay: 0.45s;
+}
+
+.sound-bar:nth-child(6) {
+  left: 21px;
+  animation-delay: .26s;
+  -webkit-animation-delay: 0.26s;
+}
+
+.sound-bar:nth-child(7) {
+  left: 25px;
+  animation-delay: .17s;
+  -webkit-animation-delay: 0.17s;
+}
+
+
+/*------------- sound bar animation ENDS HERE--------------*/

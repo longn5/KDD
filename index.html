@@ -3,6 +3,7 @@
 
 <head>
   <title>Karen Doesn't Dream</title>
+  <meta name="viewport" content"width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -14,7 +15,10 @@
   <!--delete mute when testing for sound-->
   <video id="vid" muted loop>
       <source src="vid/kdd_landing_video.mp4" type="video/mp4">
-    </video>
+  </video>
+  <div id="mobile-background">
+  <img src="img/mobile-home.png" class="background"/>
+  </div>
   <div class="title-container animated fadeIn">
     <!-- <p id="karen">KAREN</p>
     <p id="doesnt">DOESN'T</p>
@@ -28,7 +32,7 @@
     <div class="bar"></div>
   </div>
 
-<!-- **********************SOCIAL BAR BEGINS HERE ************************-->
+  <!-- **********************SOCIAL BAR BEGINS HERE ************************-->
   <div class="social">
     <div class="audio-icon">
       <audio autoplay loop src="#" type="audio/mpeg"></audio>
@@ -44,17 +48,19 @@
     </div>
     <div class="line"></div>
     <a href="http://psu.tv" style="padding-left: 0;" target="_blank"><img id="psutv-logo" src="img/logo_grayscale.png"></a>
-    <a href="">ACCLAIM</a>
-    <span>SHOWTIMES</span>
-    <a href="https://vimeo.com/250554988">TRAILER</a>
-    <a href="">FB</a>
-    <a href="">TW</a>
-    <a href="">IN</a>
+    <span id="social-links-container">
+      <a class="social-links" href="">ACCLAIM</a>
+      <a class="social-links" href="">SHOWTIMES</a>
+      <a class="social-links" href="https://vimeo.com/250554988">TRAILER</a>
+      <a class="social-links" href="">FB</a>
+      <a class="social-links" href="">TW</a>
+      <a class="social-links" href="">IN</a>
+    </span>
   </div>
-<!-- **********************SOCIAL BAR ENDS HERE ************************-->
+  <!-- **********************SOCIAL BAR ENDS HERE ************************-->
 
 
-<!-- **********************MENU STARTS HERE ****************************-->
+  <!-- **********************MENU STARTS HERE ****************************-->
   <div id="sidebar">
     <div id="menu-title-container">
       <!-- <p id="karen-menu">KAREN</p>
@@ -65,13 +71,13 @@
     <div id="menu-items-container">
       <p class="menu-item"><a href="index.html">HOME</a></p>
       <p class="menu-item"><a href="story.html">STORY</a></p>
-      <p class="menu-item"><a href="">TRAILER</a></p>
-      <p class="menu-item"><a href="">ACCLAIM</a></p>
+      <p class="menu-item"><a href="trailer.html">TRAILER</a></p>
+      <p class="menu-item"><a href="acclaim.html">ACCLAIM</a></p>
       <p class="menu-item"><a href="">SHOWTIMES</a></p>
       <p class="menu-item"><a href="">MERCHANDISE</a></p>
     </div>
   </div>
-<!-- **********************MENU STARTS ENDS ****************************-->
+  <!-- **********************MENU STARTS ENDS ****************************-->
 
   <a href="#">
     <div class="watch-now">

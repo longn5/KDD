@@ -1,7 +1,13 @@
 //delaying the video by 1.5 seconds
-setTimeout(function() {
-  document.getElementById("vid").play();
-}, 1500);
+
+if ($(window).width() > 998) {
+  setTimeout(function() {
+    document.getElementById("vid").play();
+  }, 1500);
+} else {
+  $('#vid').hide();
+  $('#mobile-background').css('display','block');
+}
 
 //To turn off sound when tab not in focus
 // $(window).blur(function() {
@@ -22,7 +28,7 @@ $('.hamburger-container').click(function() {
     $('#sidebar').css('display', 'block');
     $('#sidebar').attr({class: "animated slideInLeft"}).on('animationend webkitAnimationEn MSAnimationEnd oAnimationEnd', function() {
       $('#sidebar').css('display', 'block');
-    }//slide out menu div
+    } //slide out menu div
     );
 
     barArr[0].className = "bar top";
@@ -47,18 +53,29 @@ $('.hamburger-container').click(function() {
 
 // sound bar
 // sound bar
-$(function(){
-  $(".audio-icon").click(function(){
+$(function() {
+  $(".audio-icon").click(function() {
     $(".sound-bar").toggleClass("active");
   })
 });
 //mute and unmute when click on soundbar
-$(function(){
-    $(".audio-icon").click( function (){
-      if( $("video").prop('muted') ) {
-        $("video").prop('muted', false);
-      } else {
-        $("video").prop('muted', true);
-      }
-    });
+$(function() {
+  $(".audio-icon").click(function() {
+    if ($("video").prop('muted')) {
+      $("video").prop('muted', false);
+    } else {
+      $("video").prop('muted', true);
+    }
+  });
+});
+
+//hides the content
+$('.hamburger-container').click(function() {
+  if ($('.content-container').css('display') === 'none') {
+    console.log('fadeIn');
+    $('.content-container').fadeIn();
+  } else {
+    console.log('fadeOut');
+    $('.content-container').fadeOut();
+  }
 });
