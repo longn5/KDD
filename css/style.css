@@ -53,13 +53,27 @@ h3 {
   font-weight: 100;
 }
 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 #vid-container {
   width: auto;
   height: auto;
   position: absolute;
 }
 
-video {
+#vid {
   -webkit-transform: scale(1.35);
 }
 
@@ -92,24 +106,44 @@ video {
   line-height: 1.5;
 }
 
-.acclaim-container {
+#acclaim-circle-container {
   position: fixed;
   top: 50%;
   left: 50%;
-  margin-top: -50px;
-  margin-left: -585px;
+  /* margin-top: -50px;
+  margin-left: -755px; */
   width: 1500px;
   color: white;
   font-family: 'helvetica-neue-Thin';
   font-size: 2em;
   font-weight: 600;
   letter-spacing: .1em;
-  /* transform: translate(53%); */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-49%, -50%);
+}
+
+.acclaim-container {
+  display: none;
+  width: 75%;
 }
 
 .acclaim {
   display: inline-block;
   padding: 0 50px;
+  width: 33%;
+}
+
+.circle {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  margin: 20px;
+  border: 2px solid white;
 }
 
 .reviewer {
@@ -117,6 +151,20 @@ video {
   font-size: .8em;
   font-weight: 200;
   color: #acadaf;
+}
+
+.circle-container {
+  position: fixed;
+  top: 68%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -90px;
+}
+
+.fa-circle {
+  padding: 0 20px;
+  width: .8em !important;
+  cursor: pointer;
 }
 
 #vid {
@@ -317,7 +365,7 @@ video {
 }
 
 .menu-item {
-  padding: 1vw 0;
+  padding: 2.2vw 0;
   text-decoration: none;
 }
 
@@ -334,6 +382,110 @@ video {
   border-bottom: solid 4px white;
   display: inline;
   padding-bottom: 2px;
+}
+
+
+/*----------------------trailer-page---------------------*/
+
+.video-frame {
+  z-index: -1;
+}
+
+#trailer-page {
+  background-color: #000000;
+}
+
+#trailer-page .container {
+  width: 65vw;
+  height: calc(0.5625 * 65vw);
+  background-color: #000;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+#trailer-page .container .video-frame {
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  width: 100vw;
+  height: calc(100vw * 9/16);
+  max-height: 75vh;
+  box-shadow: inherit;
+}
+
+#trailer-page .container .video-player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(0px);
+  transform: translateZ(0px);
+}
+
+.poster {
+  transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1) 0s, visibility 1s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url('../img/story2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(1.01);
+  transform: scale(1.01);
+}
+
+.button-wrapper {
+  cursor: pointer;
+  z-index: 10;
+}
+
+.button {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: -webkit-transform 0s ease 0.5s;
+  transition: transform 0s ease 0.5s;
+  transition: transform 0s ease 0.5s, -webkit-transform 0s ease 0.5s;
+}
+
+.button:hover {
+  transition: -webkit-transform 0s ease 0.5s;
+  transition: transform 0s ease 0.5s;
+  transition: transform 0s ease 0.5s, -webkit-transform 0s ease 0.5s;
+}
+
+.play {
+  background-image: url('../img/Trailer_Play_button_blue.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+.play:hover {
+  background-image: url('../img/Trailer_Play_button.png');
+}
+
+.pause {
+  background-image: url('../img/Pause-brown.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pause:hover {
+  background-image: url('../img/Pause.png');
 }
 
 
@@ -414,7 +566,7 @@ video {
     margin-left: 0;
   }
   .menu-item {
-    padding: 4%;
+    padding: 12%;
   }
   .menu-item:active, .menu-item:focus {
     background-color: rgba(196, 202, 211, .2);
@@ -439,7 +591,16 @@ video {
     font-family: 'garamond-pro-italic';
     font-size: 65px;
   }
+  #trailer-page .container{
+     width: 100vw;
+     height:100vh;
+     z-index: 2;
+   }
 }
+
+
+/*----------------------Trailer page---------------------*/
+
 
 
 

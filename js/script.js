@@ -1,21 +1,27 @@
+
+
+
 //delaying the video by 1.5 seconds
 
 if ($(window).width() > 998) {
-  setTimeout(function() {
-    document.getElementById("vid").play();
-  }, 1500);
+  var video = document.getElementById("vid");
+  if (video !== null) {
+    setTimeout(function() {
+      document.getElementById("vid").play();
+    }, 1500);
+  }
 } else {
   $('#vid').hide();
-  $('#mobile-background').css('display','block');
+  $('#mobile-background').css('display', 'block');
 }
 
 //To turn off sound when tab not in focus
-// $(window).blur(function() {
-//   $('#vid')[0].muted = true;
-// });
-// $(window).focus(function() {
-//   $('#vid')[0].muted = false;
-// });
+$(window).blur(function() {
+  $('#vid')[0].muted = true;
+});
+$(window).focus(function() {
+  $('#vid')[0].muted = false;
+});
 
 //menu on clicked
 $('.hamburger-container').click(function() {
@@ -52,7 +58,6 @@ $('.hamburger-container').click(function() {
 });
 
 // sound bar
-// sound bar
 $(function() {
   $(".audio-icon").click(function() {
     $(".sound-bar").toggleClass("active");
@@ -79,3 +84,86 @@ $('.hamburger-container').click(function() {
     $('.content-container').fadeOut();
   }
 });
+
+//hides the WATCH NOW button
+$('.watch-now').hide();
+
+//TRAILER
+//Play when click on play button
+$('.pause').hide();
+$('#video-trailer').hide();
+$(document).ready(function() {
+  $('.play').on('click', function(ev) {
+    $("#video-trailer")[0].src += "&autoplay=1";
+    ev.preventDefault();
+      //
+  });
+});
+$(".play").on('click', function(){
+    $('#video-trailer').fadeIn(1000);
+    $('.play').hide();
+});
+//Stop when click on pause button
+$( "#video-trailer" ).mouseenter(function() {
+  $(this).fadeTo(500,0.8);
+  $('.pause').show();
+  $('.poster').css('background-image', 'none');
+});
+$( "#video-trailer" ).mouseout(function() {
+  $(this).fadeTo(500,1);
+});
+
+//when site loads
+$(document).ready(function() {
+  console.log("initial javascript running");
+  //change item menu padding
+  if ($(window).width < 628) {
+    var paddingVar = $(window).height() / 8.1;
+    paddingVar += "px";
+    $('.menu-item').css('padding', paddingVar);
+    console.log(paddingVar);
+  }
+
+  //shows the first acclaim container
+  $('.acclaim-container:first').css('display','inline-block');
+
+  //fills in the first circle
+  $('.circle:first').css('backgroundColor','white');
+
+  //if circle is clicked then change fill circle
+  $('.circle').click(function(){
+      $('.circle').css("backgroundColor", "rgba(0,0,0,0)");
+      $(this).css("backgroundColor","white");
+  });
+
+  //if second circle is clicked then empty others and fill in this one
+  $('.circle:nth-child(2)').click(function()
+  {
+      $('.acclaim-container').css("display","none");
+      $('.acclaim-container:nth-child(2)').fadeIn(1000);
+  });
+  //if third circle is clicked then empty others and fill in this one
+  $('.circle:nth-child(3)').click(function()
+  {
+      $('.acclaim-container').css("display","none");
+      // $('.acclaim-container:nth-child(3)').css("display","inline-block");
+      $('.acclaim-container:nth-child(3)').fadeIn(1000);
+  });
+  //if first circle is clicked then empty others and fill in this one
+  $('.circle:nth-child(1)').click(function()
+  {
+      $('.acclaim-container').css("display","none");
+      $('.acclaim-container:nth-child(1)').fadeIn(1000);
+  });
+
+
+
+});
+
+  //
+  // $(window).resize(function(){
+  //   var paddingVar = $(window).height() / 50;
+  //   paddingVar += "px";
+  //   $('.menu-item').css('padding', paddingVar);
+  //   console.log(paddingVar);
+  // });
