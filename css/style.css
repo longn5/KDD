@@ -489,15 +489,15 @@ h3 {
 }
 
 
-/*----------------------MOBILE STARTS HERE---------------------*/
+/*----------------------MOBILE WIDTH STARTS HERE---------------------*/
 
-@media only screen and (max-width: 1400px) and (min-width:1101px) {
+@media only screen and (max-width: 1400px) and (min-width:1001px) {
   #menu-title-container img {
     width: 35vw;
   }
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1000px){
   .title-container {
     float: left;
     position: absolute;
@@ -566,7 +566,7 @@ h3 {
     margin-left: 0;
   }
   .menu-item {
-    padding: 12%;
+    padding: 8%;
   }
   .menu-item:active, .menu-item:focus {
     background-color: rgba(196, 202, 211, .2);
@@ -593,20 +593,38 @@ h3 {
   }
   #trailer-page .container{
      width: 100vw;
-     height:100vh;
-     z-index: 2;
+     /* height:100vh; */
+     /* z-index: 2; */
+   }
+
+   .acclaim{
+     padding: 50px 0;
+     width:100%;
    }
 }
 
-
-/*----------------------Trailer page---------------------*/
-
+/*----------------------MOBILE WIDTH ENDS HERE---------------------*/
 
 
+/*----------------------MOBILE HEIGHT STARTS HERE---------------------*/
 
+@media only screen and (max-height: 668px){
+  .menu-item{
+    padding: 10% !important;
+  }
+}
+@media only screen and (max-height: 600px){
+  .menu-item{
+    padding: 8%;
+  }
+}
+@media only screen and (max-height: 550px){
+  .menu-item{
+    padding: 6%;
+  }
+}
 
-/*----------------------MOBILE ENDS HERE---------------------*/
-
+/*----------------------MOBILE HEIGHT STARTS ENDS---------------------*/
 
 /*------------- sound bar animation BEGINS HERE--------------*/
 

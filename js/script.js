@@ -155,9 +155,6 @@ $(document).ready(function() {
       $('.acclaim-container').css("display","none");
       $('.acclaim-container:nth-child(1)').fadeIn(1000);
   });
-
-
-
 });
 
   //
