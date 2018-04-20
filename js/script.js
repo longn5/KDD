@@ -1,8 +1,4 @@
-
-
-
 //delaying the video by 1.5 seconds
-
 if ($(window).width() > 998) {
   var video = document.getElementById("vid");
   if (video !== null) {
@@ -20,7 +16,14 @@ $(window).blur(function() {
   $('#vid')[0].muted = true;
 });
 $(window).focus(function() {
+  if($(".sound-bar").hasClass("active")){
+    console.log("sound off");
+    $('#vid')[0].muted = true;
+  }else
+  {
+   console.log("sound on");
   $('#vid')[0].muted = false;
+  }
 });
 
 //menu on clicked
@@ -56,6 +59,16 @@ $('.hamburger-container').click(function() {
 
   }
 });
+//hides the content
+$('.hamburger-container').click(function() {
+  if ($('.content-container').css('display') === 'none') {
+    console.log('fadeIn');
+    $('.content-container').fadeIn();
+  } else {
+    console.log('fadeOut');
+    $('.content-container').fadeOut();
+  }
+});
 
 // sound bar
 $(function() {
@@ -74,21 +87,13 @@ $(function() {
   });
 });
 
-//hides the content
-$('.hamburger-container').click(function() {
-  if ($('.content-container').css('display') === 'none') {
-    console.log('fadeIn');
-    $('.content-container').fadeIn();
-  } else {
-    console.log('fadeOut');
-    $('.content-container').fadeOut();
-  }
-});
 
+/********************************WATCH NOW STARTS******************************/
 //hides the WATCH NOW button
 $('.watch-now').hide();
+/********************************WATCH NOW ENDS********************************/
 
-//TRAILER
+/*********************************TRAILER STARTS*******************************/
 //Play when click on play button
 $('.pause').hide();
 $('#video-trailer').hide();
@@ -112,8 +117,9 @@ $( "#video-trailer" ).mouseenter(function() {
 $( "#video-trailer" ).mouseout(function() {
   $(this).fadeTo(500,1);
 });
+/*********************************TRAILER ENDS*********************************/
 
-//when site loads
+/************************ONSITE LOAD FUNCTION STARTS***************************/
 $(document).ready(function() {
   console.log("initial javascript running");
   //change item menu padding
@@ -124,6 +130,7 @@ $(document).ready(function() {
     console.log(paddingVar);
   }
 
+/****************************ACCLAIMS TRANSITIONS STARTS************************/
   //shows the first acclaim container
   $('.acclaim-container:first').css('display','inline-block');
 
@@ -156,7 +163,9 @@ $(document).ready(function() {
       $('.acclaim-container:nth-child(1)').fadeIn(1000);
   });
 });
+/****************************ACCLAIMS TRANSITIONS ENDS*************************/
 
+/************************ONSITE LOAD FUNCTION ENDS*****************************/
   //
   // $(window).resize(function(){
   //   var paddingVar = $(window).height() / 50;

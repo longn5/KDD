@@ -223,6 +223,9 @@ h3 {
   font-size: 1vw;
   text-decoration: none;
 } */
+#social-links-container{
+  margin-left: 15vw;
+}
 
 .social {
   color: white;
@@ -521,15 +524,17 @@ h3 {
   #social-links-container {
     float: right;
     margin-top: 4vh;
+    margin-left: 0;
   }
   /*hide sound bars*/
   .audio-icon {
     display: none;
   }
   /*hides the first 3 links of social links*/
-  .social-links:nth-of-type(-n+3) {
+  /*UNCOMMENT WHEN ADDING MORE SOCIAL LINKS
+  /* .social-links:nth-of-type(-n+3) {
     display: none;
-  }
+  } */
   .social {
     width: 100%;
     height: 10vh;
