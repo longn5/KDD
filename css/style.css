@@ -182,14 +182,14 @@ h3 {
   float: left;
   position: fixed;
   font-family: 'helvetica-neue-Thin';
-  top: 35%;
+  top: 25%;
   right: 15%;
   z-index: 100;
   -webkit-animation: fadeIn 4s;
 }
 
 .title-container img {
-  width: 35vw;
+  width: 70vw;
 }
 
 #karen {
