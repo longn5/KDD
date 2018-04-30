@@ -6,6 +6,9 @@ if ($(window).width() > 998) {
       document.getElementById("vid").play();
     }, 1500);
   }
+} else if($(window).width() == 1024){
+  $('#vid').hide();
+  $('#mobile-background').css('display', 'block');
 } else {
   $('#vid').hide();
   $('#mobile-background').css('display', 'block');

@@ -500,7 +500,9 @@ h3 {
   }
 }
 
-@media only screen and (max-width: 1000px){
+@media only screen and (max-width: 1000px)
+and (orientation: portrait)
+{
   .title-container {
     float: left;
     position: absolute;
@@ -519,7 +521,7 @@ h3 {
   }
   #psutv-logo {
     padding: 30px;
-    width: 25vw;
+    width: 15vw; /* CN Edit */
   }
   #social-links-container {
     float: right;
@@ -540,7 +542,7 @@ h3 {
     height: 10vh;
   }
   .social a {
-    font-size: 5vw;
+    font-size: 3vw;/* CN Edit */
   }
   #sidebar {
     width: 100%;
@@ -550,15 +552,15 @@ h3 {
     display: none;
   }
   .bar {
-    width: 75px;
-    height: 10px;
-    margin-bottom: 15px;
+    width: 50px; /* CN Edit */
+    height: 5px; /* CN Edit */
+    margin-bottom: 10px; /* CN Edit */
   }
   .hamburger-container .top {
-    -webkit-transform: translateY(20px) rotateZ(45deg);
+    -webkit-transform: translateY(15px) rotateZ(45deg);/* CN Edit */
   }
   .hamburger-container .bottom {
-    -webkit-transform: translateY(-30px) rotateZ(-45deg);
+    -webkit-transform: translateY(-15px) rotateZ(-45deg);/* CN Edit */
   }
   #menu-title-container {
     text-align: center;
@@ -567,7 +569,7 @@ h3 {
   #menu-items-container {
     font-family: 'garamond-pro-regular';
     text-align: center;
-    font-size: 7vw;
+    font-size: 5vw; /* CN Edit */
     margin-left: 0;
   }
   .menu-item {
@@ -580,7 +582,7 @@ h3 {
     border-bottom: none;
   }
   #menu-title-container img {
-    width: 100vw;
+    width: 75vw; /* CN Edit */
   }
   .content-container {
     top: 10%;
@@ -609,6 +611,34 @@ h3 {
 }
 
 /*----------------------MOBILE WIDTH ENDS HERE---------------------*/
+
+@media only screen and (min-device-width: 624px)
+and (max-device-width: 1000px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2)
+{
+
+  #menu-title-container img {
+    width: 350px; /* CN Edit */
+  }
+  #sidebar{
+    width: 45vw;
+  }
+  .content-container {
+    top: 10%;
+    left: 0;
+    font-size: 1.2em;
+    padding: 7vw;
+    width: 85vw;
+    overflow: scroll;
+    height: 65%;
+  }
+  .content-container h3 {
+    color: white;
+    font-family: 'garamond-pro-italic';
+    font-size: 35px;
+  }
+}
 
 
 /*----------------------MOBILE HEIGHT STARTS HERE---------------------*/
